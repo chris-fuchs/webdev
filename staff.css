@@ -59,7 +59,7 @@ button[type=submit] {
 }
 
 
-ul.studentList {
+ul.staffList {
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -90,7 +90,7 @@ ul.studentList {
 }
 
 
-li.studentListItem {
+li.staffListItem {
     color: black;
     background-color: rgb(240, 240, 240);
     width: 100%;
@@ -101,7 +101,7 @@ li.studentListItem {
      */
 }
 
-p.studentAttribute {
+p.staffAttribute {
     /*
     padding: 5px;
     */
@@ -113,10 +113,10 @@ p.studentAttribute {
     font-style: normal;
 }
 
-p.studentAttribute-title {
+p.staffAttribute-title {
     font-weight: bold;
 }
 
-li.studentListItem:nth-child(odd) {
+li.staffListItem:nth-child(odd) {
     background-color: white;
  }
