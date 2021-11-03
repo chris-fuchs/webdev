@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="login.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/carlito" type="text/css"/>
+        <script src="login.js"></script>
+        <title>Projects</title>
+        <link rel="icon" href="web-programming.ico">
+    </head>
+
+    <body>
+        <article>
+            <header>
+            </header>
+        
+            <main>
+                
+                <ul>
+                    <li id="admin-login">
+                        <form name="LoginForm" id="adminForm" action="students.html" onsubmit="return validateAdminLogin()" method="post">
+                            <h1>Admin Login</h1><br><br>
+                            <label for="fname">Name: </label>
+                            <input type="text" name="name" id="name" autocomplete="off">
+                            <label for="sname">Password: </label>
+                            <input type="password" name="password" id="password" >
+                            <button type="submit" value="Submit">Submit</button>
+                        </form>
+                    </li>
+                    <li id="staff-login">
+                        <form name="LoginForm" id="staffForm" action="formSuccess.html" onsubmit="return validateForm()" method="post">
+                            <h1>Staff Login</h1><br><br>
+                            <label for="fname">Name: </label>
+                            <input type="text" name="name" id="name" autocomplete="off">
+                            <label for="sname">Password: </label>
+                            <input type="password" name="password" id="password" >
+                            <button type="submit" value="Submit">Submit</button>
+                        </form>
+                    </li>
+                </ul>
+
+            </main>
+
+            <footer class="footer">
+            </footer>
+        </article>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="addStaff.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/carlito" type="text/css"/>
+        <title>Form</title>
+        <link rel="icon" href="web-programming.ico">
+        <script src="addStaff.js"></script>
+    </head>
+
+    <body>
+
+<div class="container">
+    <form name="addStaffForm" id="addStaffForm" action="staff.html" onsubmit="return validateAndAddStaffForm()" method="post">
+        <h1>Add Student</h1><br><br>
+        <label for="staffID">Staff ID: </label>
+        <input type="text" name="studentID" id="studentID" autocomplete="off">
+        <label for="fname">First Name: </label>
+        <input type="text" name="fname" id="fname" autocomplete="off">
+        <label for="sname">Last Name: </label>
+        <input type="text" name="sname" id="sname" autocomplete="off">
+        <label for ="dob">Date of Birth: </label>
+        <input type="date" name= "dob" id="dob">
+        <label for ="gender">Gender: </label>
+
+        <div class="radiobox">
+        <input type="radio" name="gender" id="gender0" value="Rather Not Say">
+        <label for="gender0" class="sublabel">Rather Not Say</label>
+        <input type="radio" name="gender" id="gender1" value="Male">
+        <label for="gender1" class="sublabel">Male</label>
+        <input type="radio" name="gender" id="gender2" value="Female">
+        <label for="gender2" class="sublabel">Female</label>
+        <input type="radio" name="gender" id="gender3" value="Diverse">
+        <label for="gender3" class="sublabel">Diverse</label>
+        </div>
+        <label for="email">E-Mail: </label>
+        <input type="text" name="email" id="email">
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+</div>
+
+    </body>
+</html>
