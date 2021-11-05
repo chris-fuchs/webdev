@@ -22,4 +22,31 @@ function validateAdminLogin() {
         alert("Login Credencials Incorrect");
         return false;
     }
+    return true;
 }
+
+function validateStaffLogin() {
+    var name = document.forms["staffForm"]["name"].value;
+    var password = document.forms["staffForm"]["password"].value;
+
+    if (name== null || name== "") {
+        alert("First Name cannot be empty");
+        return false;
+    } 
+    else if (password== null || password== "") {
+        alert("Password cannot be empty");
+        return false;
+    }
+    return true;
+}
+
+
+function validateInput(input) {
+    var inputValue = input.value;
+    if(inputValue== null || inputValue== "") {
+        alert("Input cannot be empty");
+        return false;
+    }
+    return true;
+}         
+
