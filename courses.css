@@ -4,11 +4,13 @@ body, main, article {
     padding:0;
 }
 
+/*
 .centerClass {
     align-items: center;
     align-self: center;
     align-content: center;
 }
+*/
 
 h1 {
     font-family: 'CarlitoRegular';
