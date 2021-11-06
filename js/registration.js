@@ -21,11 +21,11 @@ function validateEmail() {
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (emailRegex.test(email)) {
         emailCheckmark.style.display = "block";
-        console.log("valid email: "+emailCheckmark.style.display);
+        //console.log("valid email: "+emailCheckmark.style.display);
         //emailCheckmark.visibility = "visible";
     } else {
         emailCheckmark.style.display = "none";
-        console.log("invalid email: "+emailCheckmark.style.display);
+        //console.log("invalid email: "+emailCheckmark.style.display);
         //emailCheckmark.visibility = "hidden";
     }
 }
