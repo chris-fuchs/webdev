@@ -8,7 +8,7 @@ function validateAndAddStaffForm() {
     var email = document.forms["addStaffForm"]["email"].value;
 
 
-    if(staffID== null || stafftID== "") {
+    if(staffID== null || staffID== "") {
         alert("Staff ID cannot be empty");
         return false;
     }
