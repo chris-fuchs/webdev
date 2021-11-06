@@ -12,7 +12,7 @@ window.onload = function() {
 };
 
 function passwordCheck() {
-    pw = document.forms["addStaffForm"]["passwordInput"].value;
+    pw = document.forms["registrationForm"]["passwordInput"].value;
 
     oldPasswordStrengthLabel = passwordStrengthLabel;
     passwordStrength = checkPasswordForComplexity(pw);
