@@ -80,7 +80,3 @@ function checkPasswordForComplexity(pw) {
         return "no";
     }
 }
-
-
-
-

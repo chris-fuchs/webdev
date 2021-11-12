@@ -1,0 +1,25 @@
+{
+    "students": [
+        {
+            "ID":"22342",
+            "FirstName":"Tom",
+            "LastName": "Holland",
+            "Gender": "1",
+            "DOB": "1995/08/25",
+            "Department": "IT",
+            "EmailID": "tomholland@gmail.com",
+            "JoiningDate": "2019/03/01"
+        },
+
+        {
+            "ID":"76533",
+            "FirstName":"Tommi",
+            "LastName": "Holland",
+            "Gender": "1",
+            "DOB": "1995/08/25",
+            "Department": "Finance",
+            "EmailID": "tomholland@gmail.com",
+            "JoiningDate": "2020/10/01"
+        }
+]
+}
