@@ -114,7 +114,12 @@ p.contentAttribute {
 }
 
 p.contentAttribute-title {
+    flex: 1 1 14.28%;
+    width: 14.28%;
+    align-content:flex-start;
+    font-family: 'CarlitoRegular';
     font-weight: bold;
+    font-style: normal;
 }
 
 li.contentListItem:nth-child(odd) {
