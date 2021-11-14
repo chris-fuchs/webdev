@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/addForm.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/carlito" type="text/css"/>
+        <title>Registration</title>
+        <link rel="icon" href="img/web-programming.ico">
+        <script src="js/registration.js"></script>
+    </head>
+
+    <body>
+
+<div class="container">
+    <form name="registrationForm" id="registrationForm" action="staff.html" onsubmit="return validateAndAddStaffForm()" method="post">
+        <h1>Registration</h1><br><br>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" autocomplete="off">
+       
+        <label for="email">E-Mail: </label>
+        <div id="emailCheckmark">
+            <label for="email" class="form-icon" >✓</label>
+        </div>
+        <input type="text" name="email" id="email">
+        
+
+        <label for="password">Password: </label>
+        <!-- <input type="password" name="password" id="passwordInput" onchange="passwordCheck()"> -->
+        <div id="passwordCheckmark">
+            <label for="password" class="form-icon" >✓</label>
+        </div>
+        <input type="password" name="password" id="passwordInput" autocomplete="off">
+
+        <div class="w3-light-grey">
+            <div class="w3-red" id="bar" style="height:24px;width:0%"></div>
+        </div>
+        <label class="sublabel">
+            Password Strength:
+        </label>
+        <label class="sublabel" id="passwordStrength">
+             <b>No Password</b>
+        </label>
+
+        <button type="submit" value="Submit">Submit</button>
+
+        
+    </form>
+</div>
+
+    </body>
+</html>

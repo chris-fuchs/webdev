@@ -45,7 +45,7 @@ textarea, select {
 
 
 
-input[type=text],input[type=date], .radiobox,  select {
+input[type=text],input[type=date],input[type=password] , .radiobox,  select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -72,4 +72,32 @@ input[type=text],input[type=date], .radiobox,  select {
   
   button[type=submit]:hover {
     background-color: #45a049;
+  } 
+
+
+
+  .w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+  .w3-green,.w3-hover-green:hover{color:#fff!important;background-color:#4CAF50!important}
+  .w3-orange,.w3-hover-orange:hover{color:#fff!important;background-color:#FFA500!important}
+  .w3-red,.w3-hover-red:hover{color:#fff!important;background-color:#f44336!important}
+
+
+  .form-icon {
+      color: green;
+      font-weight: extra-bold;
+      font-size: large;
+  }
+
+  #emailCheckmark {
+    display: none;
+    position: absolute;
+    top: 245px;
+    right: 25px;
+  }
+
+  #passwordCheckmark {
+    display: none;
+    position: absolute;
+    top: 320px;
+    right: 25px;
   }

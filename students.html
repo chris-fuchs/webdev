@@ -4,7 +4,7 @@
         <link rel="stylesheet" type="text/css" href="css/admin-overview.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/carlito" type="text/css"/>
-        <script src="js/students.css"></script>
+        <script src="js/students.js"></script>
         <title>Students Overview - ADMIN</title>
         <link rel="icon" href="img/web-programming.ico">
     </head>
@@ -53,6 +53,27 @@
                 </ul>
 
                 <ul>
+                    <li id="DepartmentSelector">
+                        <form name="depForm" id="depForm">
+                            <select name="depSel" id="depSel" onchange="departmentSelector()">
+                                <option value="IT">IT</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Art">Art</option>
+                            </select>
+                        </form>
+                    </li>
+
+                    <li id="SemesterSelector">
+                        <form name="semForm" id="semForm">
+                            <select name="semSel" id="semSel" onchange="semesterSelector()">
+                                <option value="sum">Summer Semester</option>
+                                <option value="wint">Winter Semester</option>
+                            </select>
+                        </form>
+                    </li>
+                </ul>
+
+                <ul>
                     <li>
                         <ul class="contentList">
                             <li class = "contentListItem">
@@ -85,7 +106,7 @@
                                 </p>
                             </li>
 
-
+<!--
                             <li class = "contentListItem">
 
                                 <p class = "contentAttribute">
@@ -130,6 +151,7 @@
                                 <p class = "contentAttribute">
                                     null
                                 </p>
+
                                 <p class = "contentAttribute">
                                     null
                                 </p>
@@ -238,7 +260,7 @@
                                     bla7
                                 </p>
                             </li>
-
+-->
 
 
                         </ul>
