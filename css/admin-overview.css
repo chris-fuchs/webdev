@@ -34,11 +34,38 @@ ul {
     align-items: center;
 }*/
 
+@media only screen and (max-width:650px) {
+    /* 
+    worked with "prepend an ancestor element to it"
+    @ https://stackoverflow.com/a/19038303/8054877
+    */
+    ul #selector {
+        display: grid;
+        grid-template-columns: 1fr;
+        /*display: flex;
+        flex-direction: row;*/
+    }
+    
+    li .TopSelect, li .TopSearch, li .TopChange {
+        padding: 0.2em 0;
+        justify-items: center;
+        justify-content: center;
+    }
+    /*
+    li .TopSearch {
+        justify-items: center;
+        justify-content: center;
+    }
+        
+    li .TopChange {
+        justify-content: center;
+        justify-items: center;
+    }*/
+}
 
 #selector {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /*align-items: center;*/
 }
 
 .TopSelect {
@@ -48,15 +75,14 @@ ul {
 }
 
 .TopSearch {
+    display: flex;
+    justify-content: left;
     justify-items: left;
 }
-
+/*
 .TopSearch, .TopSelect, .TopChange {
     flex-direction:row;
-    /*flex: 0 0 33%;
-    width: 33%;*/
-    /*justify-items: center;*/
-}
+}*/
 
 .TopChange {
     display: flex;
@@ -120,12 +146,7 @@ button[type=submit] {
   */
 
 
-  @media screen and (max-width:750px) {
-    ul {
-        flex-direction: column;
-        align-content: center;
-    }
-}
+ 
 
 
 ul.contentList {
