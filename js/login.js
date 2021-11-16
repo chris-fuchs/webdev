@@ -1,6 +1,10 @@
 
 var loginAttempts = 0;
 
+window.onload = function() {
+    alert("!!! Development Stage !!!\n\nAdmin-Login:\n  Name: Admin\n  Password: Admin\n\nStaff-Login:\n  Name: any\n  Password: any")
+}
+
 function validateAdminLogin() {
     var name = document.forms["adminForm"]["name"].value;
     var password = document.forms["adminForm"]["password"].value;
