@@ -296,17 +296,6 @@ li.contentListItem:nth-child(odd) {
     font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.iconCircle {
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    padding: 4px;
-    background: #fff;
-    border: 2px solid #666;
-    color: #666;
-    text-align: center;
-}
-
 #add:hover {
     border: 2px solid green;
     color: green;
@@ -325,14 +314,28 @@ li.contentListItem:nth-child(odd) {
     background-color: #f1d9c9;
 }
 
+.iconCircle {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    
+}
 .signsCircle {
     line-height: 18px;
     font-size: 32px;
+    text-align: center;
     /*font: 32px Arial, sans-serif;*/
 }
 
 .specialCharCircle {
-    line-height: 28px;
+    line-height: 23px;
     font-size: 18px;
-    /*font: 18px Arial, sans-serif;*/
+    display: inline-block;
+    /*padding-top: 8px;
+    transform: rotateZ(90deg);
+    font: 18px Arial, sans-serif;*/
 }
