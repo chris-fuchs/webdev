@@ -4,7 +4,7 @@
         <link rel="stylesheet" type="text/css" href="css/admin-overview.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/carlito" type="text/css"/>
-        <script src="js/login.js"></script>
+        <script src="js/staff.js"></script>
         <title>Staff Overview - ADMIN</title>
         <link rel="icon" href="img/web-programming.ico">
     </head>
@@ -15,155 +15,119 @@
             </header>
         
             <main>
-                
-                <ul>
-                    <li class="bigger" id="students-selector">
-
-                        <form action="students.html">
-                            <button class="bigger" type="submit" value="Submit">Students</button>
-                        </form>
-                    </li>
-                    <li class="bigger" id="staff-selector">
-                        <form action="staff.html">
-                            <button class="bigger" type="submit" value="Submit">Staff</button>
-                        </form>
-                    </li>
-
-                    
-                </ul>
-
-                <ul>
-                    <li id="Add">
-                        <form action="addStaff.html">
-                            <button type="submit" value="Submit">Add Staff</button>
-                        </form>
+                <ul class="contentList" id="contentListOfStaff">
+                    <li id="topListElement" class="topListElement">
                         
+                        <div class="buttonWrapper">
+                            <button class="tab-button" style="border-top-left-radius: 10px;" data-id="home" onclick="location.href='/students.html';">Students</button>
+                            <button class="tab-button active" style="border-top-right-radius: 10px;" data-id="about" onclick="location.href='/staff.html';">Staff</button>
+                            </div>
+
+
                     </li>
-                    <li id="Update">
-                        <form action="updateStaff.html">
-                            <button type="submit" value="Submit">Update Staff</button>
-                        </form>
-                        
+
+                    <li id="selector">
+
+                        <div class="TopSearch">
+                            <input type="text" id="searchField">
+                        </div>
+
+                        <div class="TopSelect">
+
+                        </div>
+                        <div class="TopChange">
+                            <a id="studentTabLink" href="/addStaff.html" title="Add Staff" onclick="openTab(event, 'Students');">
+                                <div class="iconCircle signsCircle">+</div>
+                            </a>
+
+
+                            <a id="studentTabLink" href="javascript:alert('not yet implemented')" title="Delete Staff" onclick="openTab(event, 'Students');">
+                                <div class="iconCircle signsCircle">−</div>
+                            </a>
+
+
+                            <a id="studentTabLink" href="javascript:alert('not yet implemented')" title="Modify Staff" onclick="openTab(event, 'Students');">
+                                <div class="iconCircle specialCharCircle">✎</div>
+                            </a>
+                        </div>
+                    <li class = "contentListItem">
+
+                        <p class = "contentAttribute contentAttribute-title">
+                            StaffID
+                        </p>
+
+                        <p class = "contentAttribute contentAttribute-title">
+                            FirstName
+                        </p>
+
+                        <p class = "contentAttribute contentAttribute-title">
+                            LastName
+                        </p>
+                        <p class = "contentAttribute contentAttribute-title">
+                            Gender
+                        </p>
+
+                        <p class = "contentAttribute contentAttribute-title">
+                            DOB
+                        </p>
+
+                        <p class = "contentAttribute contentAttribute-title">
+                            E-Mail
+                        </p>
                     </li>
-                    <li id="Delete">
-                        <form action="deleteStaff.html">
-                            <button type="submit" value="Submit">Delete Staff</button>
-                        </form>
+
+                    <li class = "contentListItem">
+
+                        <p class = "contentAttribute">
+                            24052
+                        </p>
+
+                        <p class = "contentAttribute">
+                            Jack
+                        </p>
+
+                        <p class = "contentAttribute">
+                            Jones
+                        </p>
+                        <p class = "contentAttribute">
+                            03.05.1970
+                        </p>
+
+                        <p class = "contentAttribute">
+                            Male
+                        </p>
+
+                        <p class = "contentAttribute">
+                            jackjones@uni.com
+                        </p>
                     </li>
-                </ul>
 
-                <ul>
-                    <li>
-                        <ul class="contentList">
-                            <li class = "contentListItem">
+                    <li class = "contentListItem">
 
-                                <p class = "contentAttribute contentAttribute-title">
-                                    StaffID
-                                </p>
+                        <p class = "contentAttribute">
+                            548293
+                        </p>
 
-                                <p class = "contentAttribute contentAttribute-title">
-                                    FirstName
-                                </p>
+                        <p class = "contentAttribute">
+                            Josephine
+                        </p>
 
-                                <p class = "contentAttribute contentAttribute-title">
-                                   LastName
-                                </p>
-                                <p class = "contentAttribute contentAttribute-title">
-                                    DOB
-                                </p>
+                        <p class = "contentAttribute">
+                            Jones
+                        </p>
+                        <p class = "contentAttribute">
+                            23.02.1971
+                        </p>
 
-                                <p class = "contentAttribute contentAttribute-title">
-                                    Gender
-                                </p>
+                        <p class = "contentAttribute">
+                            Female
+                        </p>
 
-                                <p class = "contentAttribute contentAttribute-title">
-                                    E-Mail
-                                </p>
-                            </li>
-
-                            <li class = "contentListItem">
-
-                                <p class = "contentAttribute">
-                                    24052
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    Jack
-                                </p>
-
-                                <p class = "contentAttribute">
-                                   Jones
-                                </p>
-                                <p class = "contentAttribute">
-                                    03.05.1970
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    Male
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    jackjones@uni.com
-                                </p>
-                            </li>
-
-                            <li class = "contentListItem">
-
-                                <p class = "contentAttribute">
-                                    548293
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    Josephine
-                                </p>
-
-                                <p class = "contentAttribute">
-                                   Jones
-                                </p>
-                                <p class = "contentAttribute">
-                                    23.02.1971
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    Female
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    josejones@uni.com
-                                </p>
-                            </li>
-
-                            <li class = "contentListItem">
-
-                                <p class = "contentAttribute">
-                                    4921
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    Hershal
-                                </p>
-
-                                <p class = "contentAttribute">
-                                   Bachmann
-                                </p>
-                                <p class = "contentAttribute">
-                                    03.12.1930
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    Diverse
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    hersh@uni.com
-                                </p>
-                            </li>
-
-
-                        </ul>
+                        <p class = "contentAttribute">
+                            josejones@uni.com
+                        </p>
                     </li>
                 </ul>
-
             </main>
 
             <footer class="footer">
