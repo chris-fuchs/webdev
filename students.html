@@ -15,255 +15,91 @@
             </header>
         
             <main>
-              
-                        <ul class="contentList" id="contentListOfStudents">
-                            <li id="topListElement" class="topListElement">
-                                
-                                <div class="buttonWrapper">
-                                    <button class="tab-button active" style="border-top-left-radius: 10px;" data-id="home" onclick="location.href='/students.html';">Students</button>
-                                    <button class="tab-button" style="border-top-right-radius: 10px;" data-id="about" onclick="location.href='/staff.html';">Staff</button>
-                                  </div>
+                <ul class="contentList" id="contentListOfStudents">
+                    <li id="topListElement" class="topListElement">
+                        
+                        <div class="buttonWrapper">
+                            <button class="tab-button active" style="border-top-left-radius: 10px;" data-id="home" onclick="location.href='/students.html';">Students</button>
+                            <button class="tab-button" style="border-top-right-radius: 10px;" data-id="about" onclick="location.href='/staff.html';">Staff</button>
+                            </div>
 
 
-                            </li>
-
-                            <li id="selector">
-
-                                <div class="TopSearch">
-                                    <input type="text" id="searchField">
-                                </div>
-
-                                <div class="TopSelect">
-                                    <form name="depForm" id="depForm">
-                                        <select name="depSel" id="depSel" onchange="departmentSelector()">
-                                            <option value="Department">All Departments</option>
-                                            <option value="IT">IT</option>
-                                            <option value="Finance">Finance</option>
-                                            <option value="Art">Art</option>
-                                        </select>
-                                    </form>
-    
-                                    <form name="semForm" id="semForm">
-                                        <select name="semSel" id="semSel" onchange="semesterSelector()">
-                                            <option value="StartingSemester">All Starting Semesters</option>
-                                            <option value="sum">Summer Semester</option>
-                                            <option value="wint">Winter Semester</option>
-                                        </select>
-                                    </form>
-                                </div>
-
-                                <div class="TopChange">
-                                    <a id="studentTabLink" href="/addStudent.html" title="Add Student" onclick="openTab(event, 'Students');">
-                                        <div class="iconCircle signsCircle">+</div>
-                                    </a>
-
-
-                                    <a id="studentTabLink" href="javascript:alert('not yet implemented')" title="Delete Student" onclick="openTab(event, 'Students');">
-                                        <div class="iconCircle signsCircle">−</div>
-                                    </a>
-
-
-                                    <a id="studentTabLink" href="javascript:alert('not yet implemented')" title="Modify Student" onclick="openTab(event, 'Students');">
-                                        <div class="iconCircle specialCharCircle">✎</div>
-                                    </a>
-                                </div>
-
-                                
-                            </li>
-
-                            <li class = "contentListItem" id="tableHeader">
-
-                                <p class = "contentAttribute-title">
-                                    StudentID
-                                </p>
-
-                                <p class = "contentAttribute-title">
-                                    FirstName
-                                </p>
-
-                                <p class = "contentAttribute-title">
-                                   LastName
-                                </p>
-                                <p class = "contentAttribute-title">
-                                    Gender
-                                </p>
-
-                                <p class = "contentAttribute-title">
-                                    DOB
-                                </p>
-
-                                <p class = "contentAttribute-title">
-                                    Department
-                                </p>
-
-                                <p class = "contentAttribute-title">
-                                    E-Mail
-                                </p>
-                            </li>
-
-<!--
-                            <li class = "contentListItem">
-
-                                <p class = "contentAttribute">
-                                    23502
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    Hans
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    Wurst
-                                </p>
-                                <p class = "contentAttribute">
-                                    01.01.2000
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    Male
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    Dep1
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    hans@wurst.com
-                                </p>
-                            </li>
-
-
-                            <li class = "contentListItem">
-
-                                <p class = "contentAttribute">
-                                    56922
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    Alexandra
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    null
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    null
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    null
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    Dep3
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    alexandra@uni.de
-                                </p>
-                            </li>
-
-                            <li class = "contentListItem">
-
-                                <p class = "contentAttribute">
-                                    452196
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    Hans-Georg Alexander Lumius
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    van Heidenhorst-Müllerchen
-                                </p>
-                                <p class = "contentAttribute">
-                                    null
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    null
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    Dep2
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    hans-georg-alexander-lumius-van-heidenhorst-muellerchen@irgendeinelangeinternetseite.net
-                                </p>
-                            </li>
-
-
-                            <li class = "contentListItem">
-
-                                <p class = "contentAttribute">
-                                    bla1
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    bla2
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    bla3
-                                </p>
-                                <p class = "contentAttribute">
-                                    bla4
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    bla5
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    bla6
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    bla7
-                                </p>
-                            </li>
-
-
-                            <li class = "contentListItem">
-
-                                <p class = "contentAttribute">
-                                    bla1
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    bla2
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    bla3
-                                </p>
-                                <p class = "contentAttribute">
-                                    bla4
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    bla5
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    bla6
-                                </p>
-
-                                <p class = "contentAttribute">
-                                    bla7
-                                </p>
-                            </li>
--->
-
-
-                        </ul>
-
-                        <!--
                     </li>
-                </ul> -->
 
+                    <li id="selector">
+
+                        <div class="TopSearch">
+                            <input type="text" id="searchField">
+                        </div>
+
+                        <div class="TopSelect">
+                            <form name="depForm" id="depForm">
+                                <select name="depSel" id="depSel" onchange="departmentSelector()">
+                                    <option value="Department">All Departments</option>
+                                    <option value="IT">IT</option>
+                                    <option value="Finance">Finance</option>
+                                    <option value="Art">Art</option>
+                                </select>
+                            </form>
+
+                            <form name="semForm" id="semForm">
+                                <select name="semSel" id="semSel" onchange="semesterSelector()">
+                                    <option value="StartingSemester">All Starting Semesters</option>
+                                    <option value="sum">Summer Semester</option>
+                                    <option value="wint">Winter Semester</option>
+                                </select>
+                            </form>
+                        </div>
+
+                        <div class="TopChange">
+                            <a id="studentTabLink" href="/addStudent.html" title="Add Student" onclick="openTab(event, 'Students');">
+                                <div class="iconCircle signsCircle">+</div>
+                            </a>
+
+
+                            <a id="studentTabLink" href="javascript:alert('not yet implemented')" title="Delete Student" onclick="openTab(event, 'Students');">
+                                <div class="iconCircle signsCircle">−</div>
+                            </a>
+
+
+                            <a id="studentTabLink" href="javascript:alert('not yet implemented')" title="Modify Student" onclick="openTab(event, 'Students');">
+                                <div class="iconCircle specialCharCircle">✎</div>
+                            </a>
+                        </div>
+
+                        
+                    </li>
+
+                    <li class = "contentListItem" id="tableHeader">
+
+                        <p class = "contentAttribute-title">
+                            StudentID
+                        </p>
+
+                        <p class = "contentAttribute-title">
+                            FirstName
+                        </p>
+
+                        <p class = "contentAttribute-title">
+                            LastName
+                        </p>
+                        <p class = "contentAttribute-title">
+                            Gender
+                        </p>
+
+                        <p class = "contentAttribute-title">
+                            DOB
+                        </p>
+
+                        <p class = "contentAttribute-title">
+                            Department
+                        </p>
+
+                        <p class = "contentAttribute-title">
+                            E-Mail
+                        </p>
+                    </li>
+                </ul>
             </main>
 
             <footer class="footer">

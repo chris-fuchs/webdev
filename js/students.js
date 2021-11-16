@@ -101,31 +101,7 @@ const students =
     {"ID":"62215","FirstName":"Lelia","LastName":"Gasnell","Gender":"2","DOB":"1992/04/15","Department":"Finance","EMailID":"lgasnell2q@twitpic.com","JoiningDate":"2017/06/02"},
     {"ID":"68845","FirstName":"Cross","LastName":"Raspel","Gender":"2","DOB":"2003/11/21","Department":"Finance","EMailID":"craspel2r@ca.gov","JoiningDate":"2020/09/10"}
 ]
-/*
-let itDep = students.filter(function(person) {
-    return person.Department == "IT"
-})
-*/
-//console.log("IT Dep:")
-//console.log(itDep)
-/*
-let summerSem = students.filter(function(person) {
-    if(person.JoiningDate.split("/")[1]>=4 && person.JoiningDate.split("/")[1]<=09) {
-        return person
-    }
-})
 
-let winterSem = students.filter(function(person) {
-    if(person.JoiningDate.split("/")[1]<=3 || person.JoiningDate.split("/")[1]>=10) {
-        return person
-    } 
-})
-*/
-//console.log("SummerSemester:")
-//console.log(summerSem)
-
-//console.log("WinterSemester:")
-//console.log(winterSem)
 var searchField;
 
 window.onload = function() {
@@ -135,7 +111,6 @@ window.onload = function() {
 };
 
 function searchList() {
-    //console.log(searchField.value)
     let result = students.filter(function(person) {
         if (person.ID.includes(searchField.value)) {
             return person;
@@ -178,7 +153,6 @@ function departmentSelector() {
     let value = document.forms["depForm"]["depSel"].value
     if(value!="Department") {
         document.forms["semForm"]["semSel"].value = "StartingSemester"
-        //console.log(document.forms["semForm"]["semSel"].value)
         let list = getStudentListByDepartment(value)
         displayList(list)
     } else {
@@ -193,8 +167,6 @@ function semesterSelector() {
 
     if(value!="StartingSemester") {
         let studentList = getStudentListBySemester(value)
-    //console.log(document.forms["semForm"]["semSel"].value)
-    //console.log(studentList)
     document.forms["depForm"]["depSel"].value = "Department";
     displayList(studentList)
     } else {
@@ -273,67 +245,6 @@ function displayList(list) {
             }
         }
 
-        /*
-        var p = document.createElement("p")
-        p.className = "contentAttribute"
-        var text = document.createTextNode(list[student].ID)
-        p.appendChild(text)
-        contentListItem.appendChild(p)
-        
-        var p = document.createElement("p")
-        p.className = "contentAttribute"
-        var text = document.createTextNode(list[student].FirstName)
-        p.appendChild(text)
-        contentListItem.appendChild(p)
-
-        var p = document.createElement("p")
-        p.className = "contentAttribute"
-        var text = document.createTextNode(list[student].LastName)
-        p.appendChild(text)
-        contentListItem.appendChild(p)
-
-        var p = document.createElement("p")
-        p.className = "contentAttribute"
-        var text = document.createTextNode(list[student].DOB)
-        p.appendChild(text)
-        contentListItem.appendChild(p)
-
-
-        var p = document.createElement("p")
-        p.className = "contentAttribute"
-
-        var genderAsText
-        switch(list[student].Gender) {
-            
-            case "0":
-                genderAsText = "Male"
-                break
-            case "1":
-                genderAsText = "Female"
-                break
-            case "2":
-                genderAsText = "Diverse"
-                break
-        }
-
-
-        var text = document.createTextNode(genderAsText)
-        p.appendChild(text)
-        contentListItem.appendChild(p)
-
-
-        var p = document.createElement("p")
-        p.className = "contentAttribute"
-        var text = document.createTextNode(list[student].Department)
-        p.appendChild(text)
-        contentListItem.appendChild(p)
-
-        var p = document.createElement("p")
-        p.className = "contentAttribute"
-        var text = document.createTextNode(list[student].EMailID)
-        p.appendChild(text)
-        contentListItem.appendChild(p)
-        */
         var contentList = document.getElementById("contentListOfStudents")
         contentList.appendChild(contentListItem)
     } }
@@ -362,12 +273,8 @@ function displayList(list) {
         for (i = 0; i < tablinks.length; i++) {
             console.log(i,". Iteration")
             tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
-            //tablinks[i].className.remove(" w3-border-red");
-
         }
-        //document.getElementById(tabName).style.display = "block";
         let currentTarget = evt.currentTarget
-        //console.log("currentTarget: ",currentTarget)
         let firstElementChild = currentTarget.firstElementChild
         console.log("firstElementChild: ",firstElementChild)
         firstElementChild.className += " w3-border-red";

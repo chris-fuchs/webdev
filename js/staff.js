@@ -44,7 +44,6 @@ window.onload = function() {
 };
 
 function searchList() {
-    //console.log(searchField.value)
     let result = staff.filter(function(person) {
         if (person.ID.includes(searchField.value)) {
             return person;
@@ -121,69 +120,7 @@ function displayList(list) {
             contentListItem.appendChild(p)
             }
         }
-
-        /*
-        var p = document.createElement("p")
-        p.className = "contentAttribute"
-        var text = document.createTextNode(list[student].ID)
-        p.appendChild(text)
-        contentListItem.appendChild(p)
-        
-        var p = document.createElement("p")
-        p.className = "contentAttribute"
-        var text = document.createTextNode(list[student].FirstName)
-        p.appendChild(text)
-        contentListItem.appendChild(p)
-
-        var p = document.createElement("p")
-        p.className = "contentAttribute"
-        var text = document.createTextNode(list[student].LastName)
-        p.appendChild(text)
-        contentListItem.appendChild(p)
-
-        var p = document.createElement("p")
-        p.className = "contentAttribute"
-        var text = document.createTextNode(list[student].DOB)
-        p.appendChild(text)
-        contentListItem.appendChild(p)
-
-
-        var p = document.createElement("p")
-        p.className = "contentAttribute"
-
-        var genderAsText
-        switch(list[student].Gender) {
-            
-            case "0":
-                genderAsText = "Male"
-                break
-            case "1":
-                genderAsText = "Female"
-                break
-            case "2":
-                genderAsText = "Diverse"
-                break
-        }
-
-
-        var text = document.createTextNode(genderAsText)
-        p.appendChild(text)
-        contentListItem.appendChild(p)
-
-
-        var p = document.createElement("p")
-        p.className = "contentAttribute"
-        var text = document.createTextNode(list[student].Department)
-        p.appendChild(text)
-        contentListItem.appendChild(p)
-
-        var p = document.createElement("p")
-        p.className = "contentAttribute"
-        var text = document.createTextNode(list[student].EMailID)
-        p.appendChild(text)
-        contentListItem.appendChild(p)
-        */
-        var contentList = document.getElementById("contentListOfStaff")
+var contentList = document.getElementById("contentListOfStaff")
         contentList.appendChild(contentListItem)
     } }
 
