@@ -57,6 +57,24 @@ function searchList() {
         } else if(person.DOB.includes(searchField.value)) {
             return person
         }
+        switch(person.Gender) {
+            case "0":
+                console.log("male detected")
+                if("Male".includes(searchField.value)) {
+                    return person
+                }
+                break;
+            case "1":
+                if("Female".includes(searchField.value)) {
+                    return person
+                }
+                break;
+            case "2":
+                if("Diverse".includes(searchField.value)) {
+                    return person
+                }
+                break;
+        }
     })
 
     displayList(result)
