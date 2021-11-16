@@ -126,11 +126,34 @@ let winterSem = students.filter(function(person) {
 
 //console.log("WinterSemester:")
 //console.log(winterSem)
-
+var searchField;
 
 window.onload = function() {
+    searchField = document.getElementById("searchField");
+    searchField.addEventListener("input", searchList);
     displayList(students)
 };
+
+function searchList() {
+    //console.log(searchField.value)
+    let result = students.filter(function(person) {
+        if (person.ID.includes(searchField.value)) {
+            return person;
+        } else if(person.FirstName.includes(searchField.value)) {
+            return person
+        } else if(person.LastName.includes(searchField.value)) {
+            return person
+        } else if(person.EMailID.includes(searchField.value)) {
+            return person
+        } else if(person.DOB.includes(searchField.value)) {
+            return person
+        } else if(person.Department.includes(searchField.value)) {
+            return person
+        }
+    })
+
+    displayList(result)
+}
 
 
 function departmentSelector() {

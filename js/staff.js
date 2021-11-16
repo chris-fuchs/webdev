@@ -35,10 +35,32 @@ const staff =
 {"ID":"57121","FirstName":"Thatch","LastName":"Braunfeld","Gender":"0","DOB":"1994/05/15","EMailID":"tbraunfeldx@yolasite.com"},
 {"ID":"41771","FirstName":"Cynthia","LastName":"Sterry","Gender":"1","DOB":"2003/03/13","EMailID":"csterryy@uol.com.br"}]
 
+var searchField;
 
 window.onload = function() {
+    searchField = document.getElementById("searchField");
+    searchField.addEventListener("input", searchList);
     displayList(staff)
 };
+
+function searchList() {
+    //console.log(searchField.value)
+    let result = staff.filter(function(person) {
+        if (person.ID.includes(searchField.value)) {
+            return person;
+        } else if(person.FirstName.includes(searchField.value)) {
+            return person
+        } else if(person.LastName.includes(searchField.value)) {
+            return person
+        } else if(person.EMailID.includes(searchField.value)) {
+            return person
+        } else if(person.DOB.includes(searchField.value)) {
+            return person
+        }
+    })
+
+    displayList(result)
+}
 
 
 function displayList(list) {
