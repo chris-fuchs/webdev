@@ -276,14 +276,24 @@ li.contentListItem:nth-child(odd) {
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    padding: 2px;
+    padding: 4px;
     background: #fff;
     border: 2px solid #666;
     color: #666;
     text-align: center;
 }
 
-.iconCircle:hover {
+#add:hover {
+    border: 2px solid green;
+    color: green;
+}
+
+#del:hover {
+    border: 2px solid red;
+    color: red;
+}
+
+#mod:hover {
     border: 2px solid #ff7e28;
     color: #ff7e28;
 }
