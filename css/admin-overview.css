@@ -286,16 +286,19 @@ li.contentListItem:nth-child(odd) {
 #add:hover {
     border: 2px solid green;
     color: green;
+    background-color: rgb(198, 224, 198);
 }
 
 #del:hover {
     border: 2px solid red;
     color: red;
+    background-color: rgb(247, 221, 221);
 }
 
 #mod:hover {
     border: 2px solid #ff7e28;
-    color: #ff7e28;
+    color:#ff7e28;
+    background-color: #f1d9c9;
 }
 
 .signsCircle {

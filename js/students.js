@@ -111,18 +111,20 @@ window.onload = function() {
 };
 
 function searchList() {
+    document.forms["depForm"]["depSel"].value = "Department"
+    document.forms["semForm"]["semSel"].value = "StartingSemester"
     let result = students.filter(function(person) {
-        if (person.ID.includes(searchField.value)) {
+        if (person.ID.toLowerCase().includes(searchField.value.toLowerCase())) {
             return person;
-        } else if(person.FirstName.includes(searchField.value)) {
+        } else if(person.FirstName.toLowerCase().includes(searchField.value.toLowerCase())) {
             return person
-        } else if(person.LastName.includes(searchField.value)) {
+        } else if(person.LastName.toLowerCase().includes(searchField.value.toLowerCase())) {
             return person
-        } else if(person.EMailID.includes(searchField.value)) {
+        } else if(person.EMailID.toLowerCase().includes(searchField.value.toLowerCase())) {
             return person
-        } else if(person.DOB.includes(searchField.value)) {
+        } else if(person.DOB.toLowerCase().includes(searchField.value.toLowerCase())) {
             return person
-        } else if(person.Department.includes(searchField.value)) {
+        } else if(person.Department.toLowerCase().includes(searchField.value.toLowerCase())) {
             return person
         }
         switch(person.Gender) {
