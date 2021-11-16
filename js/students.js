@@ -128,18 +128,40 @@ let winterSem = students.filter(function(person) {
 //console.log(winterSem)
 
 
+window.onload = function() {
+    displayList(students)
+};
+
 
 function departmentSelector() {
-    let list = getStudentListByDepartment(document.forms["depForm"]["depSel"].value);
-    displayList(list)
+    let value = document.forms["depForm"]["depSel"].value
+    if(value!="Department") {
+        document.forms["semForm"]["semSel"].value = "StartingSemester"
+        //console.log(document.forms["semForm"]["semSel"].value)
+        let list = getStudentListByDepartment(value)
+        displayList(list)
+    } else {
+        document.forms["semForm"]["semSel"].value = "StartingSemester"
+        displayList(students)
+    }
 }
 
 
 function semesterSelector() {
-    let studentList = getStudentListBySemester(document.forms["semForm"]["semSel"].value)
-    console.log(document.forms["semForm"]["semSel"].value)
-    console.log(studentList)
+    let value = document.forms["semForm"]["semSel"].value;
+
+    if(value!="StartingSemester") {
+        let studentList = getStudentListBySemester(value)
+    //console.log(document.forms["semForm"]["semSel"].value)
+    //console.log(studentList)
+    document.forms["depForm"]["depSel"].value = "Department";
     displayList(studentList)
+    } else {
+        document.forms["depForm"]["depSel"].value = "Department"
+        displayList(students)
+    }
+
+    
 }
 
 
@@ -151,8 +173,8 @@ function getStudentListBySemester(semester) {
                 return person
             }
         })
-        return summerSem
-    } else { 
+        return summerSem 
+    } else if (semester=="wint") { 
         let winterSem = students.filter(function(person) {
             let month = parseInt(person.JoiningDate.split("/")[1])
             if(month<4 || month>9) {
@@ -160,7 +182,7 @@ function getStudentListBySemester(semester) {
             } 
         })
         return winterSem
-    }
+    } 
 }
 
 
@@ -286,3 +308,26 @@ function displayList(list) {
             elementsLength = elements.length
         }
     }
+
+
+    function openTab(evt, tabName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        console.log(tablinks.length)
+        for (i = 0; i < tablinks.length; i++) {
+            console.log(i,". Iteration")
+            tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+            //tablinks[i].className.remove(" w3-border-red");
+
+        }
+        //document.getElementById(tabName).style.display = "block";
+        let currentTarget = evt.currentTarget
+        //console.log("currentTarget: ",currentTarget)
+        let firstElementChild = currentTarget.firstElementChild
+        console.log("firstElementChild: ",firstElementChild)
+        firstElementChild.className += " w3-border-red";
+      }
