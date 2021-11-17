@@ -103,12 +103,39 @@ const students =
 ]
 
 var searchField;
+var modal;
+var btn;
+var span;
 
 window.onload = function() {
+    modal = document.getElementById("modal");
+    span = document.getElementsByClassName("close")[0];
+
+
     searchField = document.getElementById("searchField");
     searchField.addEventListener("input", searchList);
     displayList(students)
 };
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+function showAddStudentModal() {
+    console.log("showAddStudentModal triggerd")
+    modal.style.display = "block";
+}
+
+function closeModal() {
+    modal.style.display = "none";
+}
+
+
+
+
 
 function searchList() {
     document.forms["depForm"]["depSel"].value = "Department"
