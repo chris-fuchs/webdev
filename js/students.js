@@ -126,12 +126,18 @@ window.onclick = function(event) {
   }
 }
 
-function showAddStudentModal() {
-    console.log("showAddStudentModal triggerd")
-    modal.style.display = "block";
-    let body = document.getElementById("body")
-    body.style.overflow = "hidden"
-}
+// see comment after this function to reactive 'add student' as model
+    function showAddStudentModal() {
+        window.location.href = "addStudent.html"
+    }
+
+// Comment out and remove dummy function prior to this one to reactive 'add student' as modal
+// function showAddStudentModal() {
+//     console.log("showAddStudentModal triggerd")
+//     modal.style.display = "block";
+//     let body = document.getElementById("body")
+//     body.style.overflow = "hidden"
+// }
 
 function closeModal() {
     modal.style.display = "none";
