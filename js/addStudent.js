@@ -1,11 +1,4 @@
-Student1 = ["23502","Hans","Wurst",null,"Male","Dep1","hans@wurst.com"];
-Student2 = ["56922","Alexandra",null,null,null,"Dep2","alexandra@uni.de"];
-Student3 = ["13532","Jack",null,null,null,"Dep3","jack@uni.de"];
-
-
-var studentList = [];
-
-function validateAndAddStudentForm() {
+ function validateAndAddStudentForm() {
 
     var studentID = document.forms["addStudentForm"]["studentID"].value;
     var fname = document.forms["addStudentForm"]["fname"].value;
@@ -40,15 +33,12 @@ function validateAndAddStudentForm() {
         alert("E-Mail not in correct form")
         return false;
     }
-
-    var student = [studentID, fname, sname, dob, gender, dep, email];
-    studentList.push(student);
-
     return true;
 }
 
 
 function validateEmail(email) {
-    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-  }
+    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return emailRegex.test(email)
+}
+  
