@@ -11,7 +11,7 @@
         <link rel="icon" href="img/web-programming.ico">
     </head>
 
-    <body>
+    <body id="body">
         <article>
             <header>
             </header>
@@ -54,7 +54,8 @@
                         </div>
 
                         <div class="TopChange">
-                            <a id="studentTabLink" href="javascript:showAddStudentModal();" title="Add Student" >
+                            
+                            <a id="studentTabLink" href="javascript:showAddStudentModal();" title="Add Student">
                                 <div id="add" class="iconCircle signsCircle">+</div>
                             </a>
 
@@ -65,6 +66,10 @@
                             <a id="studentTabLink" href="javascript:alert('not yet implemented')" title="Delete Student" onclick="openTab(event, 'Students');">
                                 <div id="del"class="iconCircle signsCircle">−</div>
                             </a>
+
+                            <span class="tooltipAddStudent" id="tooltipAddStudent">Add Student</span>
+
+
                         </div>
 
                         
