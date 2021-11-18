@@ -2,11 +2,13 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/addForm.css"/>
+        <link rel="stylesheet" type="text/css" href="css/addStaffFormCheckmarks.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/carlito" type="text/css"/>
         <title>Add Staff - ADMIN</title>
         <link rel="icon" href="img/web-programming.ico">
         <script src="js/addStaff.js"></script>
+        <script src="js/addFormCheckmark.js"></script>
     </head>
 
     <body>
@@ -15,9 +17,15 @@
     <form name="addStaffForm" id="addStaffForm" action="staff.html" onsubmit="return validateAndAddStaffForm()" method="post">
         <h1>Add Staff</h1><br><br>
         <label for="staffID">Staff ID: </label>
-        <input type="text" name="staffID" id="staffID" autocomplete="off">
+        <input type="text" name="staffID" id="staffID" class="ID" autocomplete="off">
+        <div id="IDCheckmark">
+            <label for="staffID" class="form-icon">✓</label>
+        </div>
         <label for="fname">First Name: </label>
         <input type="text" name="fname" id="fname" autocomplete="off">
+        <div id="fnameCheckmark">
+            <label for="fname" class="form-icon" >✓</label>
+        </div>
         <label for="sname">Last Name: </label>
         <input type="text" name="sname" id="sname" autocomplete="off">
         <label for ="dob">Date of Birth: </label>
@@ -36,6 +44,9 @@
         </div>
         <label for="email">E-Mail: </label>
         <input type="text" name="email" id="email">
+        <div id="emailCheckmark">
+            <label for="email" class="form-icon" >✓</label>
+        </div>
         <button type="submit" value="Submit">Submit</button>
     </form>
 </div>

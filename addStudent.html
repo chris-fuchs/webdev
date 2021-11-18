@@ -2,11 +2,13 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/addForm.css"/>
+        <link rel="stylesheet" type="text/css" href="css/addStudentFormCheckmarks.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/carlito" type="text/css"/>
         <title>Add Student - ADMIN</title>
         <link rel="icon" href="img/web-programming.ico">
         <script src="js/addStudent.js"></script>
+        <script src="js/addFormCheckmark.js"></script>
     </head>
 
     <body>
@@ -15,9 +17,16 @@
     <form name="addStudentForm" id="addStudentForm" action="students.html" onsubmit="return validateAndAddStudentForm()" method="post">
         <h1>Add Student</h1><br><br>
         <label for="studentID">Student ID: </label>
-        <input type="text" name="studentID" id="studentID" autocomplete="off">
+        <input type="text" name="studentID" id="studentID" class="ID" autocomplete="off">
+        <div id="IDCheckmark">
+            <label for="studentID" class="form-icon">✓</label>
+        </div>
+
         <label for="fname">First Name: </label>
         <input type="text" name="fname" id="fname" autocomplete="off">
+        <div id="fnameCheckmark">
+            <label for="fname" class="form-icon" >✓</label>
+        </div>
         <label for="sname">Last Name: </label>
         <input type="text" name="sname" id="sname" autocomplete="off">
         <label for ="dob">Date of Birth: </label>
@@ -36,11 +45,17 @@
         </div>
         <label for="department">Department: </label>
         <select name="department" id="department">
-            <option value="Dep1">Dep1</option>
-            <option value="Dep2">Dep2</option>
-            <option value="Dep3">Dep3</option>
+            <option value="it">IT</option>
+            <option value="finance">Finance</option>
+            <option value="art">Art</option>
         </select>
+        <div id="departmentCheckmark">
+            <label for="department" class="form-icon" >✓</label>
+        </div>
         <label for="email">E-Mail: </label>
+        <div id="emailCheckmark">
+            <label for="email" class="form-icon" >✓</label>
+        </div>
         <input type="text" name="email" id="email">
         <button type="submit" value="Submit">Submit</button>
     </form>

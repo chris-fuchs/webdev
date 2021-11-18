@@ -1,0 +1,34 @@
+.form-icon {
+    color: green;
+    font-weight: extra-bold;
+    font-size: large;
+}
+
+#IDCheckmark {
+    display: none;
+    position: absolute;
+    top: 170px;
+    right: 25px;
+}
+
+#fnameCheckmark {
+    display: none;
+    position: absolute;
+    top: 245px;
+    right: 25px;
+}
+
+#departmentCheckmark {
+    display: none;
+    position: absolute;
+    top: 560px;
+    right: 35px;
+}
+
+#emailCheckmark {
+    display: none;
+    position: absolute;
+    top: 640px;
+    right: 25px;
+}
+
