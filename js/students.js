@@ -121,16 +121,22 @@ window.onload = function() {
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+    let body = document.getElementById("body")
+    body.style.overflow = "scroll"
   }
 }
 
 function showAddStudentModal() {
     console.log("showAddStudentModal triggerd")
     modal.style.display = "block";
+    let body = document.getElementById("body")
+    body.style.overflow = "hidden"
 }
 
 function closeModal() {
     modal.style.display = "none";
+    let body = document.getElementById("body")
+    body.style.overflow = "scroll"
 }
 
 
@@ -182,10 +188,12 @@ function departmentSelector() {
     let value = document.forms["depForm"]["depSel"].value
     if(value!="Department") {
         document.forms["semForm"]["semSel"].value = "StartingSemester"
+        searchField.value = ''
         let list = getStudentListByDepartment(value)
         displayList(list)
     } else {
         document.forms["semForm"]["semSel"].value = "StartingSemester"
+        searchField.value = ''
         displayList(students)
     }
 }
@@ -197,9 +205,11 @@ function semesterSelector() {
     if(value!="StartingSemester") {
         let studentList = getStudentListBySemester(value)
     document.forms["depForm"]["depSel"].value = "Department";
+    searchField.value = ''
     displayList(studentList)
     } else {
         document.forms["depForm"]["depSel"].value = "Department"
+        searchField.value = ''
         displayList(students)
     }
 
