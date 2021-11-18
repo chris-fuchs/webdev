@@ -36,7 +36,6 @@ function validateFnameAndChangeCheckmark() {
 }
 
 function validateEmailAndChangeCheckmark() {
-    console.log("E-Mail Checkmark : ",email.value)
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (emailRegex.test(email.value)) {
         emailCheckmark.style.display = "block";
