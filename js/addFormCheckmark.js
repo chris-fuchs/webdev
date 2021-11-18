@@ -7,31 +7,27 @@ let emailCheckmark
 
 window.onload = function() {
     id = document.getElementsByClassName("ID")[0]
-    id.addEventListener("input", validateID);
+    id.addEventListener("input", validateIDAndChangeCheckmark);
     idCheckmark = document.getElementById("IDCheckmark")
-    console.log(idCheckmark)
-
+    
     fname = document.getElementById("fname");
-    fname.addEventListener("input", validateFname);
+    fname.addEventListener("input", validateFnameAndChangeCheckmark);
     fnameCheckmark = document.getElementById("fnameCheckmark")
  
     email = document.getElementById("email");
-    email.addEventListener("input", validateEmail);
+    email.addEventListener("input", validateEmailAndChangeCheckmark);
     emailCheckmark = document.getElementById("emailCheckmark")
 }
 
-function validateID() {
-    console.log(id.value)
+function validateIDAndChangeCheckmark() {
     if(id.value.length==5 && id.value.match(/^[0-9]+$/) != null) {
-        console.log("ya")
         idCheckmark.style.display = "block"
     } else {
         idCheckmark.style.display = "none"
     }
 }
 
-function validateFname() {
-    console.log(fname.value)
+function validateFnameAndChangeCheckmark() {
     if(fname.value.length>1) {
         fnameCheckmark.style.display = "block"
     } else {
@@ -39,9 +35,9 @@ function validateFname() {
     }
 }
 
-function validateEmail() {
+function validateEmailAndChangeCheckmark() {
+    console.log("E-Mail Checkmark : ",email.value)
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    console.log(email.value)
     if (emailRegex.test(email.value)) {
         emailCheckmark.style.display = "block";
         //console.log("valid email: "+emailCheckmark.style.display);
