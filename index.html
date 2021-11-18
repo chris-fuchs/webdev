@@ -18,7 +18,9 @@
                 
                 <ul>
                     <li id="admin-login">
-                        <form name="LoginForm" id="adminForm" action="students.html" onsubmit="return validateAdminLogin()" method="post">
+                        <!-- <form name="LoginForm" id="adminForm" action="students.html" onsubmit="return validateAdminLogin()" method="post"> -->
+                            <form name="LoginForm" id="adminForm" action="students.html" onsubmit="return validateAdminLogin()">
+
                             <h1>Admin Login</h1><br><br>
                             <label for="fname">Name: </label>
                             <input type="text" name="name" id="name" autocomplete="off">
@@ -28,7 +30,8 @@
                         </form>
                     </li>
                     <li id="staff-login">
-                        <form name="LoginForm" id="staffForm" action="courses.html" onsubmit="return validateStaffLogin()" method="post">
+                        <!-- <form name="LoginForm" id="staffForm" action="courses.html" onsubmit="return validateStaffLogin()" method="post"> -->
+                            <form name="LoginForm" id="staffForm" action="courses.html" onsubmit="return validateStaffLogin()">
                             <h1>Staff Login</h1><br><br>
                             <label for="fname">Name: </label>
                             <input type="text" name="name" id="name" autocomplete="off">

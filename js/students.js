@@ -103,12 +103,51 @@ const students =
 ]
 
 var searchField;
+var modal;
+var btn;
+var span;
 
 window.onload = function() {
+    modal = document.getElementById("modal");
+    span = document.getElementsByClassName("close")[0];
+
+
     searchField = document.getElementById("searchField");
     searchField.addEventListener("input", searchList);
     displayList(students)
 };
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    let body = document.getElementById("body")
+    body.style.overflow = "scroll"
+  }
+}
+
+// see comment after this function to reactive 'add student' as model
+    function showAddStudentModal() {
+        window.location.href = "addStudent.html"
+    }
+
+// Comment out and remove dummy function prior to this one to reactive 'add student' as modal
+// function showAddStudentModal() {
+//     console.log("showAddStudentModal triggerd")
+//     modal.style.display = "block";
+//     let body = document.getElementById("body")
+//     body.style.overflow = "hidden"
+// }
+
+function closeModal() {
+    modal.style.display = "none";
+    let body = document.getElementById("body")
+    body.style.overflow = "scroll"
+}
+
+
+
+
 
 function searchList() {
     document.forms["depForm"]["depSel"].value = "Department"
@@ -155,10 +194,12 @@ function departmentSelector() {
     let value = document.forms["depForm"]["depSel"].value
     if(value!="Department") {
         document.forms["semForm"]["semSel"].value = "StartingSemester"
+        searchField.value = ''
         let list = getStudentListByDepartment(value)
         displayList(list)
     } else {
         document.forms["semForm"]["semSel"].value = "StartingSemester"
+        searchField.value = ''
         displayList(students)
     }
 }
@@ -170,9 +211,11 @@ function semesterSelector() {
     if(value!="StartingSemester") {
         let studentList = getStudentListBySemester(value)
     document.forms["depForm"]["depSel"].value = "Department";
+    searchField.value = ''
     displayList(studentList)
     } else {
         document.forms["depForm"]["depSel"].value = "Department"
+        searchField.value = ''
         displayList(students)
     }
 

@@ -2,7 +2,7 @@
 var loginAttempts = 0;
 
 window.onload = function() {
-    alert("!!! Development Stage !!!\n\nAdmin-Login:\n  Name: Admin\n  Password: Admin\n\nStaff-Login:\n  Name: any\n  Password: any \n\nSince there is no Back-End yet, you will have to reload the html Page after redirection")
+    alert("!!! Development Stage !!!\n\nAdmin-Login-Data:\n  Name: Admin\n  Password: Admin\n\nStaff-Login-Data:\n  For Name and Password:\n  any Characters of your choosing")
 }
 
 function validateAdminLogin() {
