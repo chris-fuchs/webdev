@@ -34,7 +34,7 @@ ul {
     align-items: center;
 }*/
 
-@media only screen and (max-width:650px) {
+@media only screen and (max-width:750px) {
     /* 
     worked with "prepend an ancestor element to it"
     @ https://stackoverflow.com/a/19038303/8054877
@@ -359,4 +359,12 @@ li.contentListItem:nth-child(odd) {
     /*padding-top: 8px;
     transform: rotateZ(90deg);
     font: 18px Arial, sans-serif;*/
+}
+
+.selection {
+    min-width: 15em;
+}
+
+#searchField {
+    max-width: 30em;
 }
