@@ -296,6 +296,35 @@ li.contentListItem:nth-child(odd) {
     font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+#add {
+    /*https://fontawesome.com/license*/
+    background-image: url(../img/plus-solid.svg);
+    background-size: 63%;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center;
+}
+
+#mod {
+    /*https://fontawesome.com/license*/
+    background-image: url(../img/pencil-alt-solid.svg);
+    background-size: 63%;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center;
+}
+
+#del {
+    /*https://fontawesome.com/license*/
+    background-image: url(../img/minus-solid.svg);
+    background-size: 63%;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center;
+}
+
+
+
 #add:hover {
     border: 2px solid green;
     color: green;
