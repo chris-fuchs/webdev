@@ -24,7 +24,7 @@ app.use(express.static("public"));
 
 app.get('/',function(req,res){
     let indexPath = path.join(__dirname+'/index.html');
-    console.log(indexPath);
+    //console.log(indexPath);
     // res.sendFile("index.html");
     res.sendFile(__dirname+'/index.html');
     //res.send('GET request to the homepage')
