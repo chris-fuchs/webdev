@@ -6,7 +6,7 @@ window.onload = function() {
 }
 
 function validateAdminLogin() {
-    var name = document.forms["adminForm"]["name"].value;
+    var name = document.forms["adminForm"]["adminName"].value;
     var password = document.forms["adminForm"]["password"].value;
 
     if(name=="Admin" && password=="Admin") {
@@ -20,7 +20,7 @@ function validateAdminLogin() {
     } else {
         loginAttempts++;
         if(loginAttempts>=3) {
-            document.forms["adminForm"]["name"].disabled = true;
+            document.forms["adminForm"]["adminName"].disabled = true;
             document.forms["adminForm"]["password"].disabled = true;
         }
         alert("Login Credencials Incorrect");
@@ -30,7 +30,7 @@ function validateAdminLogin() {
 }
 
 function validateStaffLogin() {
-    var name = document.forms["staffForm"]["name"].value;
+    var name = document.forms["staffForm"]["staffName"].value;
     var password = document.forms["staffForm"]["password"].value;
 
     if (name== null || name== "") {
