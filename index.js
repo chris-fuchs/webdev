@@ -22,6 +22,7 @@ app.listen(process.env.PORT || 3000, function(){
 router.get('/',function(req,res){
     let indexPath = path.join(__dirname+'/index.html');
     console.log(indexPath);
-    res.sendFile("index.html");
+    //res.sendFile("index.html");
+    res.send('GET request to the homepage')
     //__dirname : It will resolve to your project folder.
 });
