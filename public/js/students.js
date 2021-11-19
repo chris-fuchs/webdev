@@ -102,7 +102,7 @@
     {"ID":"68845","FirstName":"Cross","LastName":"Raspel","Gender":"2","DOB":"2003/11/21","Department":"Finance","EMailID":"craspel2r@ca.gov","JoiningDate":"2020/09/10"}
 ]*/
 
-const students
+var students
 
 
 
