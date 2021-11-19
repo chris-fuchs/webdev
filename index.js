@@ -20,9 +20,7 @@ app.listen(process.env.PORT || 3000, function(){
   });
 
   // https://stackoverflow.com/a/38757303
-const express = require("express");
-const app = express();
-app.use(express.static(__dirname));
+app.use(express.static("public"));
 
 app.get('/',function(req,res){
     let indexPath = path.join(__dirname+'/index.html');
