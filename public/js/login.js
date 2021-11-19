@@ -7,7 +7,7 @@ window.onload = function() {
 
 function validateAdminLogin() {
     var name = document.forms["adminForm"]["adminName"].value;
-    var password = document.forms["adminForm"]["password"].value;
+    var password = document.forms["adminForm"]["adminPassword"].value;
 
     if(name=="Admin" && password=="Admin") {
         return true;
@@ -21,7 +21,7 @@ function validateAdminLogin() {
         loginAttempts++;
         if(loginAttempts>=3) {
             document.forms["adminForm"]["adminName"].disabled = true;
-            document.forms["adminForm"]["password"].disabled = true;
+            document.forms["adminForm"]["adminPassword"].disabled = true;
         }
         alert("Login Credencials Incorrect");
         return false;
@@ -31,7 +31,7 @@ function validateAdminLogin() {
 
 function validateStaffLogin() {
     var name = document.forms["staffForm"]["staffName"].value;
-    var password = document.forms["staffForm"]["password"].value;
+    var password = document.forms["staffForm"]["staffPassword"].value;
 
     if (name== null || name== "") {
         alert("First Name cannot be empty");
