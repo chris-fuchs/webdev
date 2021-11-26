@@ -129,8 +129,16 @@ window.onload = function() {
     searchField.addEventListener("input", searchList);
     displayList(students)
     test()
+    test2()
 };
 
+function test2() {
+    fetch('students', {
+        method: 'get'
+    }).then(response => response.json())
+    .then(jsonData => console.log(jsonData))
+    .catch(err => {console.log(err)})
+}
 
 function test() {
     fetch('https://jsonplaceholder.typicode.com/users', {
@@ -138,7 +146,7 @@ function test() {
     }).then(response => response.json())
     .then(jsonData => printNameAndCity(jsonData))
     .catch(err => {console.log(err)})
-}
+}   
 
 function printNameAndCity(jsonData) {
     for(person in jsonData) {

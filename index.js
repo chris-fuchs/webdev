@@ -30,3 +30,7 @@ app.get('/',function(req,res){
     //res.send('GET request to the homepage')
     //__dirname : It will resolve to your project folder.
 });
+
+app.get('students',function(req,res){
+    res.sendFile('students.json')
+});
