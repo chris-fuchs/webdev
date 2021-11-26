@@ -1,4 +1,5 @@
 let students
+/*
 const students2 = 
     [
     {"ID":"29724","FirstName":"Kippy","LastName":"Shallo","Gender":"2","DOB":"1991/10/22","Department":"IT","EMailID":"kshallo0@europa.eu","JoiningDate":"2017/03/03"},
@@ -101,7 +102,7 @@ const students2 =
     {"ID":"13968","FirstName":"Mab","LastName":"Rivelin","Gender":"0","DOB":"2003/07/16","Department":"Finance","EMailID":"mrivelin2p@npr.org","JoiningDate":"2018/05/04"},
     {"ID":"62215","FirstName":"Lelia","LastName":"Gasnell","Gender":"2","DOB":"1992/04/15","Department":"Finance","EMailID":"lgasnell2q@twitpic.com","JoiningDate":"2017/06/02"},
     {"ID":"68845","FirstName":"Cross","LastName":"Raspel","Gender":"2","DOB":"2003/11/21","Department":"Finance","EMailID":"craspel2r@ca.gov","JoiningDate":"2020/09/10"}
-]
+]*/
 
 
 
@@ -146,8 +147,8 @@ function test2() {
 function setStudent(jsonData) {
     students = jsonData.students
     displayList(students)
-    console.log(students)
-    console.log(students2)
+    //console.log(students)
+    //console.log(students2)
 }
 
 function test() {
