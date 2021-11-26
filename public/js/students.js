@@ -131,7 +131,7 @@ window.onload = function() {
     
     //test()
     test2()
-    displayList(students)
+    
 };
 
 function test2() {
@@ -145,6 +145,7 @@ function test2() {
 
 function setStudent(jsonData) {
     students = jsonData.students
+    displayList(students)
     console.log(students)
     console.log(students2)
 }
