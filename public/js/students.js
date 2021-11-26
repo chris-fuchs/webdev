@@ -145,6 +145,7 @@ function test2() {
 function setStudent(jsonData) {
     students = jsonData
     console.log(students)
+    console.log(students.students)
     console.log(students2)
 }
 
