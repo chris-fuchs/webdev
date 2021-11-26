@@ -33,5 +33,5 @@ app.get('/',function(req,res){
 
 app.get('/students',function(req,res){
     console.log('triggered routing for json student file')
-    res.sendFile('students.json')
+    res.sendFile('./students.json')
 });
