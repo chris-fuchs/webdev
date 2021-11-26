@@ -143,9 +143,8 @@ function test2() {
 }
 
 function setStudent(jsonData) {
-    students = jsonData
+    students = jsonData.students
     console.log(students)
-    console.log(students.students)
     console.log(students2)
 }
 
