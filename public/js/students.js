@@ -128,9 +128,10 @@ window.onload = function() {
 
     searchField = document.getElementById("searchField");
     searchField.addEventListener("input", searchList);
-    displayList(students)
+    
     //test()
     test2()
+    displayList(students)
 };
 
 function test2() {
