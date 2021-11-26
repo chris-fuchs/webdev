@@ -136,8 +136,15 @@ function test() {
     fetch('https://jsonplaceholder.typicode.com/users', {
         method: 'get'
     }).then(response => response.json())
-    .then(jsonData => console.log(jsonData))
+    .then(jsonData => printNameAndCity(jsonData))
     .catch(err => {console.log(err)})
+}
+
+function printNameAndCity(jsonData) {
+    //jsonData.filter(person => person.Department == departmentName)
+    for(person in jsonData) {
+        console.log(person.name,person.address.city)
+    }
 }
 
 window.onclick = function(event) {
