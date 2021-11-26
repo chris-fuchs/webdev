@@ -145,8 +145,8 @@ function printNameAndCity(jsonData) {
     //jsonData.filter(person => person.Department == departmentName)
     for(person in jsonData) {
         console.log(person)
-        console.log(jsonData(person))
-        console.log(jsonData(person).name,jsonData(person).address.city)
+        console.log(jsonData[person])
+        console.log(jsonData[person].name,jsonData[person].address.city)
         //console.log(person.name,person.address.city)
     }
 }
