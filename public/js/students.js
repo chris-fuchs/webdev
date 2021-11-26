@@ -128,8 +128,17 @@ window.onload = function() {
     searchField = document.getElementById("searchField");
     searchField.addEventListener("input", searchList);
     displayList(students)
+    test()
 };
 
+
+function test() {
+    fetch('https://jsonplaceholder.typicode.com/users', {
+        method: 'get'
+    }).then(response => response.json())
+    .then(jsonData => console.log(jsonData))
+    .catch(err => {console.log(err)})
+}
 
 window.onclick = function(event) {
   if (event.target == modal) {
