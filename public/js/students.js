@@ -114,14 +114,6 @@ var btn;
 var span;
 
 window.onload = function() {
-/*
-    const myRequest = new Request('students.json');
-    fetch(myRequest)
-    .then(response => response.json().then(data => {
-        students = data
-    }))
-    .catch(console.error);*/
-
 
     modal = document.getElementById("modal");
     span = document.getElementsByClassName("close")[0];
@@ -130,16 +122,14 @@ window.onload = function() {
     searchField = document.getElementById("searchField");
     searchField.addEventListener("input", searchList);
     
-    //test()
-    test2()
+    getAndInitialDisplayJSON()
     
 };
 
-function test2() {
+function getAndInitialDisplayJSON() {
     fetch('students', {
         method: 'get'
     }).then(response => response.json())
-    //.then(jsonData => console.log(jsonData))
     .then(jsonData => setStudent(jsonData))
     .catch(err => {console.log(err)})
 }
