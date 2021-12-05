@@ -6,6 +6,20 @@ let email
 let emailCheckmark
 
 window.onload = function() {
+    dobDatepicker = document.getElementById("dob")
+    
+    let currentDate = new Date();
+    let cDay = currentDate.getDate()-1
+    if(cDay<10) {
+        cDay = "0"+cDay
+    }
+    
+    let cMonth = currentDate.getMonth() + 1
+    let cYear = currentDate.getFullYear()
+    let today = cYear + "-" + cMonth + "-" + cDay
+    dobDatepicker.max = today
+
+
     id = document.getElementsByClassName("ID")[0]
     id.addEventListener("input", validateIDAndChangeCheckmark);
     idCheckmark = document.getElementById("IDCheckmark")
